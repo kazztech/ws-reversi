@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>オンラインWSリバーシ</title>
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="create-room">
+        <h1>オンラインWSリバーシ</h1>
+        <h2>ルーム作成･参加</h2>
+        <form action="../" method="GET">
+            <div class="room-create-form">
+                <div><input id="room-name" type="text" name="r" /></div>
+                <div><button id="send-btn" type="submit">作成･参加</button></div>
+            </div>
+        </form>
+        <h2>説明</h2>
+        <ul>
+            <li>ルームの開設、既存のルームに参加が可能</li>
+            <li>ルーム名は6文字以上12文字以下</li>
+            <li>safari, chromeは動作確認済(ES6対応必須)</li>
+        </ul>
+        <h2>ルール</h2>
+        <ul>
+            <li>ルームホストが黒色で先攻</li>
+            <li>置ける場所がなくなった場合、自動でターンをパス</li>
+            <li>コマ数が０になった方は負けとする</li>
+            <li>どちらかの接続が切れた場合はリセット</li>
+        </ul>
+        <h2>更新</h2>
+        <ul>
+            <li>2019/09/14: 公開</li>
+            <li>2019/09/18: 修正</li>
+        </ul>
+    </div>
+    <canvas id="screen"></canvas>
+    <!-- ライブラリ -->
+    <script src="js/socket.io/socket.io.js"></script>
+    <!-- クラスファイル -->
+    <script src="js/libs/View.js"></script>
+    <!-- jsファイル -->
+    <script src="js/functions.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/events.js"></script>
+</body>
+
+</html>
